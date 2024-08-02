@@ -89,6 +89,9 @@ Ok it’s working.
 Now let’s configure zabbix for use them. In Zabbix Interface:
 
 Go Configuration → Templtes
+* для Заббикс 7 импортируем шаблон Linux Container by Zabbix agent
+и добавляем в узел. инструкция ниже для более ранних версий
+
 
 * Make full copy “Template OS Linux” to “Template Linux Container”
 * Open “Template Linux Container” → Items
@@ -99,7 +102,7 @@ to `ct.swap.size[free]`
 * Replace all `system.cpu.load[percpu,*]` items to `ct.cpu.load[percpu,*]`.
 
 Or just download and import [my zabbix template](https://github.com/kvaps/zabbix-linux-container-template/blob/master/zbx_linux_container_template.xml).
-
+Примечание для zabbix7 берем вот этот файл из этого репо zbx_linux_container_export_templates.yaml
 Next, go to the Configuration → Hosts
 
 * Unlink and clear “Template OS Linux” from your hosts
